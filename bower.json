@@ -1,0 +1,21 @@
+{
+  "name": "nodiun-web",
+  "description": "A web of Nodiun Developer",
+  "main": "index.js",
+  "authors": [
+    "Eduardo Quiñonez"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}
