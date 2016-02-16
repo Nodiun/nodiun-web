@@ -9,9 +9,9 @@
 	<link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-	<header class="header container">
+	<header id ="header" class="header">
 		<div class="header-container">
-			<h1 class="header-title">Nodiun</h1>
+			<h1 class="header-title">NODIUN</h1>
 			<button id="button-menu" class="header-menu"><i class="fa fa-bars"></i></button>
 		</div>
 		<nav id="nav" class="header-nav">
@@ -25,7 +25,8 @@
 	</header>
 	<article class="presentation">
 		<div class="presentation-content">
-			<h2 class="presentation-needs">¿Necesitas... |</h2>
+			<img class="presentation-logo" src="./img/logo.png" alt="logo">
+			<h2 id="sponsor" class="presentation-needs"></h2>
 			<h2 class="presentation-spot">Creamos el internet que necesitas</h2>
 			<h3 class="presentation-info">Desarrollo de aplicaciones y sitios web</h3>
 			<button class="presentation-button">Contactanos</button>
@@ -44,18 +45,20 @@
 	</article>
 	<article class="sponsor">
 		<h2 class="sponsor-title">Por qué elegirnos</h2>
-		<ul class="sponsor-list">
-			<li>Somos jovenes al tanto de las nuevas tecnologias.</li>
-			<li>Te damos el control total del producto que te ofrecemos.</li>
-			<li>Trabajamos por pasión, no por deber.</li>
-			<li>Orientamos sus necesidades al internet de hoy.</li>
-		</ul>
-		<ul class="sponsor-list">
-			<li>Conocimientos y apoyo de la Universidad Nacion Mayor de San Marcos</li>
-			<li>Metodologias y buenas practicas para un mejor desarrollo y soporte</li>
-			<li>Estamos conformados por especialistas de diseño y desarrollo de software.</li>
-			<li></li>
-		</ul>
+		<div class="sponsor-content">
+			<ul class="sponsor-list">
+				<li>Somos jovenes al tanto de las nuevas tecnologias.</li>
+				<li>Te damos el control total del producto que te ofrecemos.</li>
+				<li>Trabajamos por pasión, no por deber.</li>
+				<li>Orientamos sus necesidades al internet de hoy.</li>
+			</ul>
+			<ul class="sponsor-list">
+				<li>Conocimientos y apoyo de la Universidad Nacion Mayor de San Marcos</li>
+				<li>Metodologias y buenas practicas para un mejor desarrollo y soporte</li>
+				<li>Estamos conformados por especialistas de diseño y desarrollo de software.</li>
+				<li></li>
+			</ul>
+		</div>
 	</article>
 	<div class="decoration">
 	</div>
@@ -63,31 +66,27 @@
 		<h2 class="ourwork-title">Nuestro trabajo</h2>
 		<ul class="ourwork-projects">
 			<li>
-				<picture >
-					<img class="ourwork-projects-cover" src="">
-				</picture>
 				<h3 class="ourwork-projects-title">entrevistarte.com</h3>
 				<p class="ourwork-projects-parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit adipisci possimus eaque nam temporibus.</p>
 			</li>
 			<li>
-				<picture >
-					<img class="ourwork-projects-cover" src="">
-				</picture>
 				<h3 class="ourwork-projects-title">entrevistarte.com</h3>
 				<p class="ourwork-projects-parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit adipisci possimus eaque nam temporibus.</p>
 			</li>
 			<li>
-				<picture >
-					<img class="ourwork-projects-cover" src="">
-				</picture>
 				<h3 class="ourwork-projects-title">entrevistarte.com</h3>
 				<p class="ourwork-projects-parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit adipisci possimus eaque nam temporibus.</p>
 			</li>
+			<li>
+				<h3 class="ourwork-projects-title">entrevistarte.com</h3>
+				<p class="ourwork-projects-parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit adipisci possimus eaque nam temporibus.</p>
+			</li>
+			
 		</ul>
 	</article>
 	<article class="contact">
 		<h2 class="contact-title">Contactanos</h2>
-		<ul>
+		<ul class="contact-list">
 			<li class="contact-item"><a href="#"><i class="fa fa-facebook-official"></i>/nodiun</a></li>
 			<li class="contact-item"><a href="#"><i class="fa fa-phone"></i>931 512 718</a></li>
 			<li class="contact-item"><a href="#"><i class="fa fa-twitter"></i>@nodiun</a></li>

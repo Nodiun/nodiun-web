@@ -35,7 +35,7 @@ gulp.task('build:js', function() {
 
 gulp.task('build:css', function() {
 	gulp.src(path.styles.main)
-		.pipe(stylus({ use: nib(), compress: true, 'include css': true }))
+		.pipe(stylus({ use: nib(), compress: false, 'include css': true }))
 		.pipe(gulp.dest(path.styles.output))
 		.pipe(connect.reload());
 	});
