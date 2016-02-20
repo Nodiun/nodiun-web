@@ -32,6 +32,6 @@ function maquina(contenedor,texto,intervalo){
       }},intervalo);
 };
 
-maquina("sponsor",frases[1],100);
+maquina("needs",frases[1],100);
 
 button.addEventListener("click", toggleMenu);

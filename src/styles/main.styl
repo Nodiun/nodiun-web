@@ -23,16 +23,17 @@ h1, h2, h3, h4, h5
 	padding 0
 a
 	text-decoration: none
+	color $black
 ul
 	list-style-type: none
 	margin 0
 	padding 0
 h1
-	color white
+	color $light
 	font-size 1.8em
 	font-weight: 400
 h2, h3
-	color white
+	color $light
 	font-weight 400
 	padding-bottom: .7em
 h2
@@ -57,18 +58,40 @@ button
 	padding 0 8.333%
 	padding-top 4em
 	background-color $base
+	background-image: url("../img/bg1.jpg")
 	background-size cover
 	width 100%
+	&-needs
+		color $secundary
+		display block
+		font-size 1em
+		height 3em
+		padding 1em 10%
+		vertical-align: center
+		background-color rgba(white, .7)
+		border-radius 3em
+		margin-bottom 1em
+		position relative
+		&:after
+			content: "";
+			position: absolute;
+			top: 100%;
+			right: 30%;
+			border-top: 20px solid rgba(white, .7)
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
 	&-logo
-		margin .5em
+		margin-bottom .5em
 		width 5em
 	&-content
 		text-align center
 		padding 0 25%
 		padding 2em .5em
 	&-button
-		box-shadow: 1px 2px 5px rgba(black, .7)
+		box-shadow: 0px 2px 6px rgba(black, .5)
 		font-size 1.3em
+		&:focus
+			outline 0
 
 .jobs
 	z-index 9
@@ -76,13 +99,33 @@ button
 	&-item
 		padding 1em
 		border 1px solid $gris
+		border-radius 3px
 		z-index 9
-		transition background-color 500ms ease-in-out
-		color: $black
+		background-color $secundary
+		transition background-color 500ms ease
+		animation-name jobs
+		animation-duration 3s
 		&-title
 			text-align: center
-		&:hover
-			background-color $black
+			color white
+		&:nth-child(1)
+			&:hover
+				background-color #EE568B
+		&:nth-child(2)
+			&:hover
+				background-color #FF765F
+		&:nth-child(3)
+			&:hover
+				background-color #5DADFF
+			
+@keyframes jobs
+	0%
+		background-color white
+	50%
+		background-color white
+	100%
+		background-color $secundary
+			
 .sponsor
 	color $base
 	border-left .5em solid $base
@@ -130,16 +173,9 @@ button
 				font-size 1.5em
 			&:last-child::after
 				content none
-		&-cover
-			width 100%
-			height 7em
-			background-color $light
-			border-radius: .1em
-			background-image: url(../img/page1.jpg)
-			background-size: cover
-			box-shadow: 1px 1px 2px rgba(gray, .75)
 		&-title
 			padding 0
+			color $black
 		&-parrafo
 			margin .3em 0
 
@@ -151,8 +187,15 @@ button
 	.fa
 		font-size 2em
 		padding .3em
-	a
-		color $black
+		transition color 500ms ease
+	.fa-facebook-official:hover
+		color #3b5998
+	.fa-twitter:hover
+		color #55acee
+	.fa-phone:hover
+		color #89F049
+	.fa-envelope:hover
+		color #F55D5D
 	&-title
 		color $base
 		text-align center
@@ -160,12 +203,17 @@ button
 		font-size 1.4em
 		
 @media only screen  and (min-width : 550px)
-
+	
 	html
 		font-size 1.1em
 	.header
 		&-container
 			height: 5em
+	.presentation
+		&-needs
+			margin-right: auto
+			margin-left: auto
+			width 10em
 	.sponsor
 		li
 			font-size: 1.1em
@@ -211,24 +259,24 @@ button
 			font-size 2em
 			
 
-@media only screen  and (min-width : 1024px)
+@media only screen  and (min-width : 1050px)
 	html
-		font-size 1.3em
+		font-size 1.2em
 	.header
 		&-container
 			height: 3.3em
 		&-nav
-			border-radius 0 0 0 3px
+			border-radius 4px
 			height auto
 			position absolute
 			width 20em
-			top 3.3em
+			top 4.3em
 			right -20em
 			background-color rgba($black, .6)
 			transition all .3s ease-in-out
 			&--show
 				background-color rgba($black, .9)
-				right 0
+				right 1em
 	.sponsor
 		padding-left $margen
 		padding-right $margen
@@ -240,7 +288,7 @@ button
 		padding-left $margen
 		padding-right $margen
 	.jobs
-		padding .5em 16.666%
+		padding .5em $margen
 		&-item
 			margin .5em
 	.contact
