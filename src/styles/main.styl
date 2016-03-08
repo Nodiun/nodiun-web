@@ -100,7 +100,7 @@ a.anchor
 		border 1px solid $gris
 		border-radius 3px
 		z-index 9
-		background-color $secundary
+		background-color $base
 		transition background-color 500ms ease
 		animation-name jobs
 		animation-duration 3s
@@ -130,7 +130,7 @@ a.anchor
 	border-left .5em solid $base
 	border-right .5em solid transparent
 	box-sizing: border-box
-	padding 4em 8.666%
+	padding 1.5em 8.666%
 	z-index 2
 	&-title
 		text-align center
@@ -139,16 +139,28 @@ a.anchor
 	li
 		font-size .9em
 		margin-bottom 1.9em
-		
+	&-content--first
+		font-size 2em
+		li
+			text-align: center
+			color white
+			background-color $base
+			border-radius: 3px
+			margin-bottom .5em
+			margin-top .5em
+			padding .5em
+			transition all 100ms ease-in
+			&:hover
+				transform scale(1.05,1.05)
 	
 .decoration
 	height 11em
 	background-color: $base
 	background-size: cover
-	&:nth-child(8)
+	&:nth-child(10)
 		background-position: top
 		background-image: url("../img/bg2.jpg");
-	&:nth-child(13)
+	&:nth-child(15)
 		background-position: bottom
 		background-image: url("../img/bg2.jpg");
 		
@@ -157,7 +169,7 @@ a.anchor
 	border-left .5em solid $base
 	border-right .5em solid transparent
 	box-sizing: border-box
-	padding 4em 8.666%
+	padding 1.5em 8.666%
 	&-title
 		text-align center
 		color $base
